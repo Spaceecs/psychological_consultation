@@ -13,11 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Гаврилюк Тетяна - Психолог онлайн",
+    title: 'Гаврилюк Тетяна — Психолог онлайн',
     description:
-        "Практичний психолог, психотерапевт. Онлайн-консультації, сертифікати, напрямки роботи, відповіді на поширені запитання.",
-    icons: "/favicon.ico"
-};
+        'Практичний психолог, психотерапевт. Онлайн‑консультації, сертифікати, напрямки роботи, відповіді на поширені запитання.',
+    openGraph: {
+        title: 'Гаврилюк Тетяна — Психолог онлайн',
+        description:
+            'Практичний психолог, психотерапевт. Онлайн‑консультації, сертифікати, напрямки роботи, відповіді на поширені запитання.',
+        url: 'https://psiholog-online.com.ua',
+        siteName: 'Психолог Онлайн',
+        images: [
+            {
+                url: 'https://psiholog-online.com.ua/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Гаврилюк Тетяна — Онлайн психолог'
+            }
+        ],
+        locale: 'uk_UA',
+        type: 'website'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Гаврилюк Тетяна — Психолог онлайн',
+        description:
+            'Практичний психолог, психотерапевт. Онлайн‑консультації, сертифікати, напрямки роботи, відповіді на поширені запитання.',
+        images: ['https://psiholog-online.com.ua/og-image.png']
+    },
+    icons: '/favicon.ico'
+}
+
 
 
 export default function RootLayout({
