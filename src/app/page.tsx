@@ -45,13 +45,6 @@ const certificates = [
 export default function Home() {
     return (
         <div>
-            <Head>
-                <link rel="icon" type="image/png" href="/mental-health.png" />
-                <title>Гаврилюк Тетяна – Психолог онлайн</title>
-                <meta name="description" content="Практичний психолог, психотерапевт. Онлайн-консультації, сертифікати, напрямки роботи, відповіді на поширені запитання." />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-
             <Header />
 
             {/* Головна секція */}
