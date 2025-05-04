@@ -339,7 +339,7 @@ html {
   justify-items: center; /* Вирівнюємо елементи по центру в кожному стовпці */
 }
 
-.reason-item {
+.reason-list li {
   background-color: #f3f4f6;
   color: #563440;
   padding: 20px 30px;
