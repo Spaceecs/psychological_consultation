@@ -60,7 +60,7 @@ export default function Header() {
 
                     {/* Телефон */}
                     <a href="tel:+380956237458" className="mt-4 text-xl hover:underline">
-                        +38 (093) 206-91-97
+                        +38 (095) 623-74-58
                     </a>
 
                     {/*/!* Соцмережі *!/*/}
