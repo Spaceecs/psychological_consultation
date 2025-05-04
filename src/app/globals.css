@@ -1,0 +1,401 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Основні стилі */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-image: url('/images/photo_2025-04-29_14-51-07.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 800px) {
+  .image-container {
+    height: 350px;
+    background-position: center center;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  background-color: rgba(86, 52, 64, 0.7);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .overlay {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+.container {
+  padding: 20px 100px;
+  background-color: #ffffff;
+  color: #000000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-service {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+  background-color: #ffe0e6;
+  color: #000000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-service .text-container {
+  padding-bottom: 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.text-container + .text-container {
+  margin-top: 30px;
+  border-top: 2px solid #000;
+  padding-top: 30px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container p,
+.text-container h2,
+.text-container h3,
+.text-container ul {
+  padding: 2rem 1rem 0 1rem;
+}
+
+div h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #563440;
+}
+
+div h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #563440;
+}
+
+.overlay h1 {
+  color: white;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+button {
+  background-color: #563440;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: #452539;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(86, 52, 64, 0.4);
+}
+
+.question-container button {
+  background-color: #f3f4f6;
+  color: #563440;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.question-container button:hover {
+  background-color: #e5e7eb;
+  color: #452539;
+  transform: scale(1.05);
+}
+
+/* ▼▼▼ Стилі для details/summary ▼▼▼ */
+.cert-details > div {
+  margin-top: 1rem;
+}
+
+.cert-details summary {
+  background-color: #f3f4f6;
+  color: #563440;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.cert-details summary:hover {
+  background-color: #e5e7eb;
+}
+
+.cert-details .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.cert-details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.text-details summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.text-details[open] .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.collapsible-wrapper details {
+  padding: 20px 0;
+  border-bottom: 1px solid #000000;
+}
+
+.collapsible-wrapper details:last-of-type {
+  border-bottom: none;
+}
+
+/* ▼▼▼ Сітка сертифікатів ▼▼▼ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.grid img {
+  width: 100%;
+  height: 295px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  padding: 10px;
+}
+
+/* ▼▼▼ Футер ▼▼▼ */
+.footer-section {
+  background-color: #563440;
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.footer-section h1,
+.footer-section h2,
+.footer-section h3,
+.footer-section p,
+.footer-section a {
+  color: white;
+}
+
+.footer-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 1rem;
+}
+
+/* ▼▼▼ Посилання ▼▼▼ */
+a {
+  color: #563440;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav a {
+  color: white;
+}
+a:hover {
+  color: #96507e;
+  text-decoration: underline;
+}
+
+/* ▼▼▼ Адаптивність ▼▼▼ */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container,
+  .container-service {
+    padding: 20px;
+  }
+
+  .text-container p,
+  .text-container h2,
+  .text-container h3,
+  .text-container ul {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* ▼▼▼ Анімація ▼▼▼ */
+details[open] summary ~ * {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-padding-top: 200px; /* Враховує висоту хедера */
+}
+
+.reason-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+  display: grid; /* Використовуємо grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 2 стовпці, якщо ширина екрану дозволяє */
+  gap: 20px; /* Відстань між елементами */
+  justify-items: center; /* Вирівнюємо елементи по центру в кожному стовпці */
+}
+
+.reason-item {
+  background-color: #f3f4f6;
+  color: #563440;
+  padding: 20px 30px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reason-item:hover {
+  background-color: #e5e7eb;
+  transform: scale(1.05);
+}
+
+.reason-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(86, 52, 64, 0.4);
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #563440;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .reason-list {
+    grid-template-columns: 1fr 1fr; /* 2 стовпці на екранах до 768px */
+    padding: 0 20px;
+  }
+
+  .reason-item {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reason-list {
+    grid-template-columns: 1fr; /* Один стовпець на мобільних пристроях */
+    padding: 0 10px;
+  }
+
+  .reason-item {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
