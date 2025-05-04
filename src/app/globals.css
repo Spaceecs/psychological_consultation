@@ -386,6 +386,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 20px; /* додано для вирівнювання зліва */
+    padding-right: 20px;
   }
   .footer-section h1,
   .footer-section h2,
