@@ -378,7 +378,7 @@ html {
     padding: 0 20px;
   }
 
-  .reason-item {
+  .reason-item li{
     padding: 15px 25px;
     font-size: 18px;
   }
@@ -390,7 +390,7 @@ html {
     padding: 0 10px;
   }
 
-  .reason-item {
+  .reason-item li{
     padding: 12px 20px;
     font-size: 16px;
   }
