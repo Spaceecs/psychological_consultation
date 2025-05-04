@@ -5,8 +5,6 @@ import {
     FaWhatsapp,
     FaViber,
     FaTelegram,
-    FaFacebookF,
-    FaInstagram,
     FaBars,
     FaTimes,
 } from 'react-icons/fa'
