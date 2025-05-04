@@ -333,10 +333,10 @@ html {
   list-style-type: none;
   padding-left: 0;
   margin-top: 20px;
-  display: grid; /* Використовуємо grid */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 2 стовпці, якщо ширина екрану дозволяє */
-  gap: 20px; /* Відстань між елементами */
-  justify-items: center; /* Вирівнюємо елементи по центру в кожному стовпці */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
 .reason-list li {
@@ -354,31 +354,12 @@ html {
   box-sizing: border-box;
 }
 
-.reason-item:hover {
-  background-color: #e5e7eb;
-  transform: scale(1.05);
-}
-
-.reason-item:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(86, 52, 64, 0.4);
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 600;
-  color: #563440;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 @media (max-width: 768px) {
   .reason-list {
-    grid-template-columns: 1fr 1fr; /* 2 стовпці на екранах до 768px */
+    grid-template-columns: 1fr 1fr;
     padding: 0 20px;
   }
-
-  .reason-item li{
+  .reason-list li {
     padding: 15px 25px;
     font-size: 18px;
   }
@@ -386,16 +367,32 @@ html {
 
 @media (max-width: 600px) {
   .reason-list {
-    grid-template-columns: 1fr; /* Один стовпець на мобільних пристроях */
+    grid-template-columns: 1fr;
     padding: 0 10px;
   }
-
-  .reason-item li{
+  .reason-list li {
     padding: 12px 20px;
     font-size: 16px;
   }
-
   .section-title {
     font-size: 24px;
+  }
+}
+
+/* ▼▼▼ Адаптив для футера на мобільних */
+@media (max-width: 600px) {
+  .footer-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section h1,
+  .footer-section h2,
+  .footer-section h3,
+  .footer-section p,
+  .footer-section a {
+    text-align: center;
+    width: 100%;
   }
 }
