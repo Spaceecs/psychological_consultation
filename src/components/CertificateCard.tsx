@@ -1,5 +1,10 @@
 
-export default function CertificateCard({ title, image }) {
+type CertificateCardProps = {
+    title: string;
+    image: string;
+};
+
+export default function CertificateCard({ title, image }: CertificateCardProps) {
     return (
         <div className="rounded-xl overflow-hidden shadow-md bg-white">
             <img src={image} alt={title} className="w-full h-40 object-cover" />

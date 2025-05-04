@@ -47,19 +47,19 @@ export default function Header() {
 
                     {/* Контакти в рядок */}
                     <div className="flex space-x-6 mt-8">
-                        <a href="https://wa.me/380932069197" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#CFCFCD] text-3xl">
+                        <a href="https://wa.me/380956237458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#CFCFCD] text-3xl">
                             <FaWhatsapp />
                         </a>
-                        <a href="viber://chat?number=+380932069197" target="_blank" rel="noopener noreferrer" aria-label="Viber" className="text-[#9A879D] text-3xl">
+                        <a href="viber://chat?number=+380956237458" target="_blank" rel="noopener noreferrer" aria-label="Viber" className="text-[#9A879D] text-3xl">
                             <FaViber />
                         </a>
-                        <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="text-[#D7DEDC] text-3xl">
+                        <a href="https://t.me/Gavrulyk_T" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="text-[#D7DEDC] text-3xl">
                             <FaTelegram />
                         </a>
                     </div>
 
                     {/* Телефон */}
-                    <a href="tel:+380932069197" className="mt-4 text-xl hover:underline">
+                    <a href="tel:+380956237458" className="mt-4 text-xl hover:underline">
                         +38 (093) 206-91-97
                     </a>
 
